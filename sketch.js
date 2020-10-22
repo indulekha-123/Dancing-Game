@@ -40,19 +40,17 @@ function preload(){
 
 
 function setup() {
-  createCanvas(500, 400);
+  createCanvas(windowWidth,windowHeight);
   
-   player=createSprite(70,200,10,70);
+   player=createSprite(250,350,250);
    player.scale=0.5;
     pImage =3;
   
-     computer=createSprite(380,200,10,70);
+     computer=createSprite(690,350,250,70);
     computer.scale=0.5;
     cImage=1;
   
- // gameOver=createSprite(250,200);
-// gameOver.addImage(gameOverImg);
- // gameOver.scale=0.5;
+ 
   
    
   score=0;
@@ -94,20 +92,17 @@ if (gameState===PLAY){
   textSize(30);
   fill("black");
    text("Score :"+score,20,30);
-   text ("Score 500 to Win",250,30);
+   text ("Score 500 to Win",670,30);
   
   
-  textSize(15);
-  text ("Use Arrow Keys to dance",150,375);
+  textSize(20);
+  text ("Use Arrow Keys to dance",300,700);
   
   
   
-   for (var i = 0; i < 400; i=i+20) {
-    line(250,i,250,i+10);
    
-  }
   
-  
+
   if(keyDown(UP_ARROW)){
     computer.addImage(playerImg1);
     cImage=1;
@@ -129,7 +124,10 @@ if (gameState===PLAY){
  }
   
   
- 
+  
+    
+    
+  
  
  
   
